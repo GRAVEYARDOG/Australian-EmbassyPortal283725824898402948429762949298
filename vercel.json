@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "profile-cards/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "profile-cards/dist"
+      }
+    },
+    {
+      "src": "jeskojets.com/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/profile-cards/(.*)",
+      "dest": "/profile-cards/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/jeskojets.com/$1"
+    }
+  ]
+}

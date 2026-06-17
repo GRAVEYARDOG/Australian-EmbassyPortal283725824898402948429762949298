@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Birds of Paradise';
+  src: url('./assets/BirdsOfParadise.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kenoky';
+  src: url('./assets/KenokyLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coffekan';
+  src: url('./assets/CoffekanRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-lux: "Cinzel", Georgia, serif;
+  --font-birds: "Birds of Paradise", cursive;
+  --font-kenoky: "Kenoky", sans-serif;
+  --font-coffe: "Coffekan", sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+
+/* Ensure all cards preserve their layout font-sans / font-mono instead of inheriting font-kenoky on body */
+[id^="card-"] {
+  font-family: var(--font-sans) !important;
+}
+
+[id^="card-"] h2,
+[id^="card-"] p,
+[id^="card-"] div,
+[id^="card-"] span {
+  font-family: inherit;
+}
+
+[id^="card-"] .font-mono,
+[id^="card-"] .font-mono * {
+  font-family: var(--font-mono) !important;
+}

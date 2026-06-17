@@ -1,0 +1,27 @@
+node_modules/
+build/
+coverage/
+.DS_Store
+*.log
+.env
+.env.local
+.env.production
+
+# Downloaded CDN assets — not source files
+cdn.jsdelivr.net/
+cdn.prod.website-files.com/
+d3e54v103j8qbb.cloudfront.net/
+assets.slater.app/
+unpkg.com/
+
+# Cached data
+_DataURI/
+
+# Kilo config
+.kilo/
+.vscode/
+.playwright-mcp/
+
+# OS files
+Thumbs.db
+desktop.ini

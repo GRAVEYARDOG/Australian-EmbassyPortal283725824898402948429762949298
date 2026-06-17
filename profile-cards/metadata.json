@@ -1,0 +1,6 @@
+{
+  "name": "Profile Cards",
+  "description": "Australian Embassy official verification and registry console featuring verified profile cards with double-tick visual markers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
