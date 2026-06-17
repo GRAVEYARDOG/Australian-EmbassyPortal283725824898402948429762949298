@@ -1,0 +1,8 @@
+{
+  "name": "australian-embassy-portal",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "vercel-build": "cd profile-cards && npm install && npm run build && rm -rf ../jeskojets.com/profile-cards && cp -r dist ../jeskojets.com/profile-cards"
+  }
+}
